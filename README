@@ -1,0 +1,24 @@
+kvjson
+======
+
+kvjson is a simple command-line tool for converting JSON files to a simple
+key-value format, so that JSON content can be easily processed with
+standard line-based Unix text-processing tools such as grep, sed, awk.
+
+Dependencies
+============
+
+A standard Unix-like base system with C compiler and development headers.
+
+Build & Install
+===============
+
+./configure ~
+make install
+
+Usage
+=====
+
+e.g.
+
+./kvjson <file.json | grep /hello/foobar | cut -d: -f2-

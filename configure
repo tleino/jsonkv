@@ -1,0 +1,26 @@
+#!/bin/sh
+# Usage: ./configure [install prefix]
+
+prefix=/usr/local
+if [ "$#" -eq 1 ] ; then prefix=$1 ; fi
+echo "prefix=${prefix}"
+
+SYSTEM_CFLAGS=
+case $(uname) in
+	Linux )
+		SYSTEM_CFLAGS=-D_POSIX_C_SOURCE=2
+	;;
+	OpenBSD )
+		SYSTEM_CFLAGS=
+	;;
+esac
+echo "system: $(uname)"
+echo "SYSTEM_CFLAGS=" ${SYSTEM_CFLAGS}
+
+echo "create: Makefile"
+echo '# Automatically generated from Makefile.in by configure' >Makefile
+echo >>Makefile
+sed \
+	-e "s|@prefix@|${prefix}|g" \
+	-e "s|@SYSTEM_CFLAGS@|${SYSTEM_CFLAGS}|g" \
+	Makefile.in >>Makefile
