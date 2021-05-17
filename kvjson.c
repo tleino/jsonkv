@@ -26,11 +26,11 @@ main(int argc, char *argv[])
 			break;
 		case 'h':
 		default:
-			fprintf(stderr, "Usage: %s [-v]\n",
+			fprintf(stderr, "Usage: %s [-d]\n",
 			    argv[0]);
 			fprintf(stderr,
 			    "\t-d\tdebug\n");
-			break;
+			return 1;
 		}
 	}
 
