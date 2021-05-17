@@ -22,3 +22,8 @@ Usage
 e.g.
 
 ./kvjson <file.json | grep /hello/foobar | cut -d: -f2-
+
+See also
+========
+
+https://github.com/tleino/xmlq
