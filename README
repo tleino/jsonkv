@@ -1,7 +1,7 @@
-kvjson
+jsonkv
 ======
 
-kvjson is a simple command-line tool for converting JSON files to a simple
+jsonkv is a simple command-line tool for converting JSON files to a simple
 key-value format, so that JSON content can be easily processed with
 standard line-based Unix text-processing tools such as grep, sed, awk.
 
@@ -21,9 +21,10 @@ Usage
 
 e.g.
 
-./kvjson <file.json | grep /hello/foobar | cut -d: -f2-
+./jsonkv <file.json | grep /hello/foobar | cut -d: -f2-
 
 See also
 ========
 
-https://github.com/tleino/kvxml
+https://github.com/tleino/xmlkv
+

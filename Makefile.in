@@ -12,14 +12,14 @@ mandir = $(datarootdir)/man
 INSTALL ?= install
 INSTALLFLAGS ?=
 
-SRCS=jsonv.c kvjson.c \
+SRCS=jsonv.c jsonkv.c \
 	
 DISTFILES=\
 	Makefile.in\
 	configure\
 	README\
 	LICENSE
-PROG=kvjson
+PROG=jsonkv
 
 OBJS=$(SRCS:.c=.o)
 
